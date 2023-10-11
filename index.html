@@ -1,97 +1,45 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-<meta charset="UTF-8"/>
-<title>Tunnel Rush 2 Unblocked - ubg235 Poki</title>
-<link rel="icon" type="image/png" href="favicon.png"/>
-<style type="text/css">
-  body {
-      margin: 0;
-      background-color: black;
-  }
-  .game {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      margin: 0px;
-      border: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      display: block;
-  }
-  #display728x90 {
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        margin-left: auto;
-        margin-right: auto;
-        top: 20px;
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bouncy Woods Unblocked - ubg235 Poki</title>
 
-        width: 728px;
-        height: 90px;
-        display: none;
-    /*	background: #505050; */
-    }
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="Bouncy Woods">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    #display320x50 {
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        margin-left: auto;
-        margin-right: auto;
-        top: 10px;
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/spinner.css" />
+    </head>
+    <body>
+        <div id="rotate">
+            <svg viewBox="0 0 24 24">
+                <path
+                        d="M16.48 2.52c3.27 1.55 5.61 4.72 5.97 8.48h1.5C23.44 4.84 18.29 0 12 0l-.66.03 3.81 3.81 1.33-1.32zm-6.25-.77c-.59-.59-1.54-.59-2.12 0L1.75 8.11c-.59.59-.59 1.54 0 2.12l12.02 12.02c.59.59 1.54.59 2.12 0l6.36-6.36c.59-.59.59-1.54 0-2.12L10.23 1.75zm4.6 19.44L2.81 9.17l6.36-6.36 12.02 12.02-6.36 6.36zm-7.31.29C4.25 19.94 1.91 16.76 1.55 13H.05C.56 19.16 5.71 24 12 24l.66-.03-3.81-3.81-1.33 1.32z"
+                ></path>
+            </svg>
+        </div>
+        <div id="loading-spinner-container">
+            <div id="loading-spinner" class="loading-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="canvas-container"></div>
+        <div id="editor-panels"></div>
 
-        width: 320px;
-        height: 50px;
-        display: none;
-    /*	background: #505050; */
-    }
-</style>
-</head>
-
-<body style="background:black">
-  <canvas class="game" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
-  <div id="display728x90"></div>
-  <div id="display320x50"></div>
-
-  <script type="text/javascript">
-    var Module = {
-        preRun: [],
-        postRun: [],
-        print: (function() {
-            return function(text) {
-                text = Array.prototype.slice.call(arguments).join(' ');
-                console.log(text);
-            };
-        })(),
-        printErr: function(text) {
-            text = Array.prototype.slice.call(arguments).join(' ');
-            console.error(text);
-        },
-        canvas: (function() {
-            var canvas = document.getElementById('canvas');
-            canvas.addEventListener("webglcontextlost", function(e) { alert('FIXME: WebGL context lost, please reload the page'); e.preventDefault(); }, false);
-            return canvas;
-        })(),
-        setStatus: function(text) { },
-        monitorRunDependencies: function(left) { },
-    };
-    window.onerror = function(event) {
-        console.log("onerror: " + event.message);
-    };
-/*    window.addEventListener('keydown', ev => {
-			if (['ArrowDown', 'ArrowUp', ' '].includes(ev.key)) {
-				ev.preventDefault();
-			}
-		});
-	window.addEventListener('wheel', ev => ev.preventDefault(), { passive: false }); */
-  </script>
-  <!--<script type="text/javascript" src="main.js"></script>-->
-  <script src="patch/js/poki-sdk.js"></script>
-  <script async="false" type="text/javascript" src="moonbird.js"></script>
-  <!-- <script async="false" type="text/javascript" src="runtime1.js"></script> -->
-  <script src="js/analytics_ubg_v1_4.js"></script>
-  <script src="js/slopegame-gitlab-io.js"></script>
-</body>
+        <script>window.environment = "deploy-poki"</script>
+        <script src="patch/js/poki-sdk.js"></script>
+        <script src="js/bundle.min.js?v=680" type="text/javascript"></script>
+        <script src="js/game.min.js?v=680" type="text/javascript"></script>
+        <script src="js/analytics_ubg_v1_4.js"></script>
+    </body>
 </html>
